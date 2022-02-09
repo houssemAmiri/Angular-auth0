@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AuthOptions, WebAuth } from 'auth0-js';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -14,11 +15,11 @@ export class AuthService {
 
   constructor() {
     this._properties = {
-      clientID: '2OIrstZiHFrGiUPZJfIsl0vgSfItT1qH',
-      domain: 'dev-yqj-w-ru.us.auth0.com',
+      clientID: environment.clientID,
+      domain: environment.domain,
       responseType: 'token id_token',
-      audience: 'http://localhost:3000',
-      redirectUri: 'http://localhost:4200',
+      audience: environment.audience,
+      redirectUri: environment.redirectUri,
       scope: 'openid profile'
     };
     this._auth0Client = new WebAuth({...this._properties});

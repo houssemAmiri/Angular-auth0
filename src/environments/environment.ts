@@ -4,6 +4,12 @@
 
 export const environment = {
   production: false, 
+  apiKey: 'http://localhost:3000', 
+  clientID: '2OIrstZiHFrGiUPZJfIsl0vgSfItT1qH', 
+  domain: 'dev-yqj-w-ru.us.auth0.com',
+  audience: 'http://localhost:3000', 
+  redirectUri: 'http://localhost:4200'
+
 };
 
 /*
